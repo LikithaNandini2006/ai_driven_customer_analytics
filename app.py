@@ -186,7 +186,7 @@ if view == "Dashboard":
         customers[["customer_id", "name", "city", "monthly_spend", "total_spending", "churn"]]
         .sort_values("total_spending", ascending=False)
         .head(10),
-        width="stretch",
+        use_container_width=True,
     )
 
 elif view == "Customer Segmentation":
@@ -205,7 +205,7 @@ elif view == "Customer Segmentation":
 
     st.dataframe(
         segmented[["customer_id", "name", "city", "total_spending", "monthly_spend", "segment"]],
-        width="stretch",
+        use_container_width=True,
     )
 
 elif view == "Churn Prediction":
@@ -227,7 +227,7 @@ elif view == "Churn Prediction":
     st.subheader("Customer Churn Risk Score")
     st.bar_chart(output.set_index("name")["churn_risk_score"].sort_values(ascending=False))
 
-    st.dataframe(output, width="stretch")
+    st.dataframe(output, use_container_width=True)
 
 elif view == "Purchase Prediction":
     accuracy, predictions, probabilities = train_classifier(customers, "purchased")
@@ -248,7 +248,7 @@ elif view == "Purchase Prediction":
     st.subheader("Customer Purchase Score")
     st.bar_chart(output.set_index("name")["purchase_score"].sort_values(ascending=False))
 
-    st.dataframe(output, width="stretch")
+    st.dataframe(output, use_container_width=True)
 
 elif view == "Recommendations":
     output = customers[["customer_id", "name", "city", "total_spending", "support_tickets"]].copy()
@@ -266,7 +266,7 @@ elif view == "Recommendations":
     st.subheader("Customer Spending for Recommended Products")
     st.bar_chart(output.set_index("name")["total_spending"].sort_values(ascending=False))
 
-    st.dataframe(output, width="stretch")
+    st.dataframe(output, use_container_width=True)
 
 else:
     st.subheader("Raw Customer Data")
@@ -278,4 +278,4 @@ else:
         st.caption("Total Spending by Customer")
         st.bar_chart(customers.set_index("name")["total_spending"].sort_values(ascending=False))
 
-    st.dataframe(customers, width="stretch")
+    st.dataframe(customers, use_container_width=True)

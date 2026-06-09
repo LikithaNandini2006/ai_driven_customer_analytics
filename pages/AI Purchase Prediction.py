@@ -29,5 +29,5 @@ st.bar_chart(df.set_index("Name")["Purchase_Score"].sort_values(ascending=False)
 
 st.dataframe(
     df[["Customer_ID", "Name", "Visits_Last_30_Days", "Monthly_Spend", "Purchase_Score", "Purchased"]],
-    width="stretch",
+    use_container_width=True,
 )

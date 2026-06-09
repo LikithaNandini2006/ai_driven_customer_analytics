@@ -29,5 +29,5 @@ st.bar_chart(df.set_index("Name")["Churn_Risk_Score"].sort_values(ascending=Fals
 
 st.dataframe(
     df[["Customer_ID", "Name", "City", "Support_Tickets", "Total_Spending", "Churn_Risk_Score", "Churn"]],
-    width="stretch",
+    use_container_width=True,
 )
