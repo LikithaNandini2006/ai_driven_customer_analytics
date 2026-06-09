@@ -1,5 +1,5 @@
 # AI-Driven Customer Analytics Platform
-
+DEMO LINK:https://ai-driven-customer-analytics-3.onrender.com
 ## Overview
 
 AI-Driven Customer Analytics Platform is a Machine Learning-based web application developed using **Python, Streamlit, Pandas, Scikit-Learn, and Data Visualization techniques**. The system helps businesses analyze customer behavior, identify customer segments, predict customer churn, forecast future purchases, and generate personalized product recommendations.
