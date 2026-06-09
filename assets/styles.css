@@ -1,0 +1,39 @@
+:root {
+  --bg: #f7f8fb;
+  --ink: #18202f;
+  --muted: #647086;
+  --line: #dfe4ec;
+  --accent: #0f766e;
+  --accent-2: #c2410c;
+}
+
+.block-container {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+[data-testid="stMetric"] {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #ffffff;
+}
+
+.app-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.app-kicker {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.app-subtitle {
+  color: var(--muted);
+  margin-top: -8px;
+}
